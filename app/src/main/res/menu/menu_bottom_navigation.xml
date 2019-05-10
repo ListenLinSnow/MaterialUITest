@@ -19,6 +19,6 @@
     <item
         android:id="@+id/action_write"
         android:title="write"
-        android:icon="@mipmap/write" />
+        android:icon="@mipmap/edit" />
 
 </menu>

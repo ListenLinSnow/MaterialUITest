@@ -60,6 +60,9 @@ public class MainActivity extends AppCompatActivity implements SingleTextAdapter
 
         infoList.add("Buttons");
         classList.add(ButtonsActivity.class);
+
+        infoList.add("FloatingActionButton");
+        classList.add(FloatingButtonActivity.class);
     }
 
     /**
