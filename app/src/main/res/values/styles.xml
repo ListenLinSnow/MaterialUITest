@@ -1,0 +1,27 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!-- 扁平化按钮属性设置 -->
+    <style name="FlatButton" parent="Theme.AppCompat.Light">
+        <item name="buttonStyle">@style/Widget.AppCompat.Button.Borderless.Colored</item>
+        <item name="android:textColor">@color/md_orange_500</item>
+        <item name="colorControlHighlight">@color/md_orange_200</item>
+        <item name="colorAccent">@color/md_orange_700</item>
+    </style>
+
+    <!-- 浮动按钮(RaisedButton)属性设置(是普通按钮,不是FloatingActionBar) -->
+    <style name="FloatButton" parent="Theme.AppCompat.Light">
+        <item name="buttonStyle">@style/Widget.AppCompat.Button</item>
+        <item name="android:textColor">@color/md_white</item>
+        <item name="colorControlHighlight">@color/md_blue_800</item>
+        <item name="android:colorButtonNormal">@color/md_blue_500</item>
+    </style>
+
+</resources>

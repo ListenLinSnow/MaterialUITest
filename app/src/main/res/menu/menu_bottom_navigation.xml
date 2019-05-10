@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/action_read"
+        android:title="read"
+        android:icon="@mipmap/read"/>
+
+    <item
+        android:id="@+id/action_code"
+        android:title="code"
+        android:icon="@mipmap/code" />
+
+    <item
+        android:id="@+id/action_game"
+        android:title="game"
+        android:icon="@mipmap/game" />
+
+    <item
+        android:id="@+id/action_write"
+        android:title="write"
+        android:icon="@mipmap/write" />
+
+</menu>
