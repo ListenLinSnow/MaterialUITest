@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.design.chip.Chip
+        android:id="@+id/chip_chip_single"
+        style="@style/Widget.MaterialComponents.Chip.Action"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="单一chip"
+        android:clickable="true" />
+
+    <android.support.design.chip.Chip
+        android:id="@+id/chip_chip_filter"
+        style="@style/Widget.MaterialComponents.Chip.Filter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="filter"
+        android:clickable="true"
+        android:checkable="true" />
+
+    <android.support.design.chip.Chip
+        android:id="@+id/chip_chip_entry_chip"
+        style="@style/Widget.MaterialComponents.Chip.Entry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="EntryChip"
+        android:clickable="true"
+        android:checkable="true" />
+
+    <android.support.design.chip.Chip
+        android:id="@+id/chip_chip_choice_chip"
+        style="@style/Widget.MaterialComponents.Chip.Choice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="ChoiceChip"
+        android:clickable="true"
+        android:checkable="true" />
+
+</LinearLayout>

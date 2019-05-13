@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/dialog_title"
+        android:layout_marginTop="24dp"
+        android:layout_marginLeft="24dp"
+        android:textStyle="bold"
+        android:textColor="@color/md_black"
+        android:textSize="16dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/dialog_content"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginTop="20dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:layout_marginTop="24dp">
+
+        <Button
+            android:id="@+id/btn_dialog_agree"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:minWidth="64dp"
+            android:layout_alignParentRight="true"
+            android:text="AGREE"
+            android:theme="@style/FlatButton"/>
+
+        <Button
+            android:id="@+id/btn_dialog_disagree"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:minWidth="64dp"
+            android:layout_toLeftOf="@id/btn_dialog_agree"
+            android:layout_marginRight="8dp"
+            android:text="DISAGREE"
+            android:theme="@style/FlatButton"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

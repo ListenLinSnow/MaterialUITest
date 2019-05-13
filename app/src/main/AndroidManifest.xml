@@ -21,6 +21,10 @@
         <activity android:name=".activity.CardViewActivity" />
         <activity android:name=".activity.ButtonsActivity" />
         <activity android:name=".activity.FloatingButtonActivity" />
+        <activity android:name=".activity.ChipActivity"
+            android:theme="@style/ChipAppTheme"/>
+
+        <activity android:name=".activity.DialogActivity" />
 
     </application>
 

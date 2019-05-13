@@ -20,8 +20,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 tools:targetApi="LOLLIPOP"
-                android:layout_margin="8dp"
                 android:clickable="true"
+                android:layout_margin="8dp"
                 android:foreground="?android:attr/selectableItemBackground"
                 android:stateListAnimator="@drawable/lift_on_touch"
                 app:cardCornerRadius="4dp"
@@ -57,16 +57,39 @@
 
                     </RelativeLayout>
 
-                    <LinearLayout
+                    <RelativeLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                        android:layout_height="wrap_content">
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/test_info"
+                            android:layout_margin="10dp"
+                            android:layout_centerVertical="true"/>
+
+                        <ImageView
+                            android:id="@+id/iv3_card_view"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@mipmap/arrow_down"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
                             android:layout_margin="10dp"/>
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_card_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:visibility="invisible">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/content"/>
 
                     </LinearLayout>
 
@@ -116,18 +139,18 @@
 
                     </RelativeLayout>
 
-                    <LinearLayout
+                    <RelativeLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                        android:layout_height="wrap_content">
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/test_info"
-                            android:layout_margin="10dp"/>
+                            android:layout_margin="10dp"
+                            android:layout_centerVertical="true"/>
 
-                    </LinearLayout>
+                    </RelativeLayout>
 
                 </LinearLayout>
 

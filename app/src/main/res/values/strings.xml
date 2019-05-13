@@ -2,5 +2,8 @@
     <string name="app_name">MaterialUITest</string>
 
     <string name="test_info">世间安得双全法，不负如来不负卿</string>
+    <string name="content">不但如此。在一年之前，这寂静和空虚是并不这样的，常常含着期待；期待子君的到来。在久待的焦躁中，一听到皮鞋的高底尖触着砖路的清响，是怎样地使我骤然生动起来呵！于是就看见带着笑涡的苍白的圆脸，苍白的瘦的臂膊，布的有条纹的衫子，玄色的裙。她又带了窗外的半枯的槐树的新叶来，使我看见，还有挂在铁似的老干上的一房一房的紫白的藤花。</string>
+    <string name="dialog_title">Use Google\'s location service?</string>
+    <string name="dialog_content">Let Google help apps determine location.This means sending anonymous location data to Google,eve no apps are running.</string>
 
 </resources>
