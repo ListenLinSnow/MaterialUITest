@@ -66,12 +66,12 @@ public class CardViewActivity extends AppCompatActivity {
         float density = metrics.density;
         Log.d("test", "width:" + width + "\nheight:" + height + "\ndensity:" + density);
 
-        new Thread(){
+        cardView.post(new Runnable() {
             @Override
             public void run() {
                 handler.sendEmptyMessage(1);
             }
-        }.start();
+        });
 
         upDownIv.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -82,12 +82,12 @@ public class CardViewActivity extends AppCompatActivity {
 
                     ObjectAnimator alphaAnimator = ObjectAnimator.ofFloat(contentLl, "alpha", 0f, 1f);
                     alphaAnimator.setInterpolator(new AccelerateInterpolator());
-                    alphaAnimator.setDuration(1000);
+                    alphaAnimator.setDuration(500);
                     alphaAnimator.start();
 
                     ValueAnimator valueAnimator = ValueAnimator.ofFloat(0f, 1f);
                     valueAnimator.setInterpolator(new AccelerateInterpolator());
-                    valueAnimator.setDuration(1000);
+                    valueAnimator.setDuration(500);
                     valueAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
                         @Override
                         public void onAnimationUpdate(ValueAnimator animation) {
@@ -104,7 +104,7 @@ public class CardViewActivity extends AppCompatActivity {
 
                     ObjectAnimator alphaAnimator = ObjectAnimator.ofFloat(contentLl, "alpha", 1f, 0f);
                     alphaAnimator.setInterpolator(new AccelerateInterpolator());
-                    alphaAnimator.setDuration(1000);
+                    alphaAnimator.setDuration(500);
                     alphaAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
                         @Override
                         public void onAnimationUpdate(ValueAnimator animation) {
@@ -118,7 +118,7 @@ public class CardViewActivity extends AppCompatActivity {
                     alphaAnimator.start();
                     ValueAnimator valueAnimator = ValueAnimator.ofFloat(1f, 0f);
                     valueAnimator.setInterpolator(new AccelerateInterpolator());
-                    valueAnimator.setDuration(1000);
+                    valueAnimator.setDuration(500);
                     valueAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
                         @Override
                         public void onAnimationUpdate(ValueAnimator animation) {
@@ -131,7 +131,6 @@ public class CardViewActivity extends AppCompatActivity {
                     });
                     valueAnimator.start();
                 }
-                getWidthAndHeight(contentLl);
             }
         });
     }
@@ -155,11 +154,14 @@ public class CardViewActivity extends AppCompatActivity {
                     Log.d("test", "contentHeight:" + contentHeight);
                     contentLl.setVisibility(View.GONE);
                     totalHeight = (int) getWidthAndHeight(cardView).get("height");
+                    Log.d("test", "totalHeight:" + totalHeight);
                     break;
                 default:
                     break;
             }
         }
     };
+
+
 
 }
