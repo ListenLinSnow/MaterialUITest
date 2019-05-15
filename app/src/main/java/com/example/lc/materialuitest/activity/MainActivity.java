@@ -1,6 +1,7 @@
 package com.example.lc.materialuitest.activity;
 
 import android.content.Intent;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.DefaultItemAnimator;
@@ -10,6 +11,7 @@ import android.support.v7.widget.RecyclerView;
 
 import com.example.lc.materialuitest.R;
 import com.example.lc.materialuitest.adapter.SingleTextAdapter;
+import com.example.lc.materialuitest.view.CustomVerticalDecoration;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -39,7 +41,7 @@ public class MainActivity extends AppCompatActivity implements SingleTextAdapter
     private void init(){
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setItemAnimator(new DefaultItemAnimator());
-        recyclerView.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));
+        recyclerView.addItemDecoration(new CustomVerticalDecoration(ContextCompat.getDrawable(this, R.drawable.item_divider)));
 
         initList();
 
@@ -69,6 +71,15 @@ public class MainActivity extends AppCompatActivity implements SingleTextAdapter
 
         infoList.add("Dialog");
         classList.add(DialogActivity.class);
+
+        infoList.add("ListView");
+        classList.add(ListActivity.class);
+
+        infoList.add("Picker");
+        classList.add(PickerActivity.class);
+
+        infoList.add("ProgressBar");
+        classList.add(ProgressBarActivity.class);
     }
 
     /**

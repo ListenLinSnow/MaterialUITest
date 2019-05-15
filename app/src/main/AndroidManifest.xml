@@ -25,6 +25,9 @@
             android:theme="@style/ChipAppTheme"/>
 
         <activity android:name=".activity.DialogActivity" />
+        <activity android:name=".activity.ListActivity" />
+        <activity android:name=".activity.PickerActivity" />
+        <activity android:name=".activity.ProgressBarActivity" />
 
     </application>
 
