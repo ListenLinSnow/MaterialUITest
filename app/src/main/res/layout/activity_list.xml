@@ -52,6 +52,19 @@
                 android:background="@color/md_black"
                 android:alpha="0.12" />
 
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_list_slide"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/md_black"
+                android:alpha="0.12" />
+
         </LinearLayout>
 
     </ScrollView>

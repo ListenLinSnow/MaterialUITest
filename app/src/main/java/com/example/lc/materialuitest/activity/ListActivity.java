@@ -5,7 +5,6 @@ import android.support.annotation.Nullable;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
-import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.helper.ItemTouchHelper;
@@ -32,6 +31,8 @@ public class ListActivity extends AppCompatActivity {
     RecyclerView rvSwitch;
     @BindView(R.id.rv_list_sort)
     RecyclerView rvSort;
+    @BindView(R.id.rv_list_slide)
+    RecyclerView rvSlide;
 
     private SelectedRvAdapter selectedRvAdapter;
     private List<SingleItem> selectedList;
@@ -84,6 +85,13 @@ public class ListActivity extends AppCompatActivity {
         itemTouchHelperCallback.setSwipeEnable(true);
         ItemTouchHelper helper = new ItemTouchHelper(itemTouchHelperCallback);
         helper.attachToRecyclerView(rvSort);
+
+        rvSlide.setLayoutManager(new LinearLayoutManager(this));
+        rvSlide.setItemAnimator(new DefaultItemAnimator());
+        rvSlide.addItemDecoration(new CustomVerticalDecoration(ContextCompat.getDrawable(this, R.drawable.item_divider)));
+
+
+
     }
 
 }
