@@ -80,6 +80,12 @@ public class MainActivity extends AppCompatActivity implements SingleTextAdapter
 
         infoList.add("ProgressBar");
         classList.add(ProgressBarActivity.class);
+
+        infoList.add("RecyclerView加载动画测试");
+        classList.add(RecyclerViewAnimTestActivity.class);
+
+        infoList.add("CoordinatorActivity测试");
+        classList.add(CoordinatorTestActivity.class);
     }
 
     /**

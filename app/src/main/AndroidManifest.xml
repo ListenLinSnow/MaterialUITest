@@ -28,6 +28,9 @@
         <activity android:name=".activity.ListActivity" />
         <activity android:name=".activity.PickerActivity" />
         <activity android:name=".activity.ProgressBarActivity" />
+        <activity android:name=".activity.RecyclerViewAnimTestActivity" />
+
+        <activity android:name=".activity.CoordinatorTestActivity"/>
 
     </application>
 
