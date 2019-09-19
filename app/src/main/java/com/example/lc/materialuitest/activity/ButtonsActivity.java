@@ -1,9 +1,11 @@
 package com.example.lc.materialuitest.activity;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.AppCompatSpinner;
+import android.support.v7.widget.Toolbar;
 
 import com.example.lc.materialuitest.R;
 
@@ -12,6 +14,8 @@ import butterknife.ButterKnife;
 
 public class ButtonsActivity extends AppCompatActivity {
 
+    @BindView(R.id.toolbar_buttons)
+    Toolbar toolbar;
     @BindView(R.id.spinner_buttons)
     AppCompatSpinner spinner;
 
@@ -25,7 +29,8 @@ public class ButtonsActivity extends AppCompatActivity {
     }
 
     private void init(){
-
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setElevation(16);
     }
 
 }

@@ -11,6 +11,7 @@ import android.support.v7.widget.RecyclerView;
 
 import com.example.lc.materialuitest.R;
 import com.example.lc.materialuitest.adapter.SingleTextAdapter;
+import com.example.lc.materialuitest.util.CheckPermissionUtil;
 import com.example.lc.materialuitest.view.CustomVerticalDecoration;
 
 import java.util.ArrayList;
@@ -35,10 +36,21 @@ public class MainActivity extends AppCompatActivity implements SingleTextAdapter
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
 
+
+
         init();
     }
 
     private void init(){
+        //添加拍摄、存储、录音、定位权限
+        List<String> permissionList = new ArrayList<>();
+        CheckPermissionUtil.addPermissionsToList(permissionList, CheckPermissionUtil.PERMISSION_CAMERA);
+        CheckPermissionUtil.addPermissionsToList(permissionList, CheckPermissionUtil.PERMISSION_MICROPHONE);
+        CheckPermissionUtil.addPermissionsToList(permissionList, CheckPermissionUtil.PERMISSION_LOCATION);
+        CheckPermissionUtil.addPermissionsToList(permissionList, CheckPermissionUtil.PERMISSION_STORAGE);
+        CheckPermissionUtil.addPermissionsToList(permissionList, CheckPermissionUtil.PERMISSION_PHONE);
+        CheckPermissionUtil.verifyPermissions(this, permissionList);
+
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.addItemDecoration(new CustomVerticalDecoration(ContextCompat.getDrawable(this, R.drawable.item_divider)));
@@ -86,6 +98,33 @@ public class MainActivity extends AppCompatActivity implements SingleTextAdapter
 
         infoList.add("CoordinatorActivity测试");
         classList.add(CoordinatorTestActivity.class);
+
+        infoList.add("二维码测试");
+        classList.add(CodeTestActivity.class);
+
+        infoList.add("拍照加水印测试");
+        classList.add(Camera1TestActivity.class);
+
+        infoList.add("拍视频水印测试");
+        classList.add(RecordActivity.class);
+
+        infoList.add("OpenGL开发测试");
+        classList.add(OpenGLTestActivity.class);
+
+        infoList.add("高德地图测试");
+        classList.add(AMapTestActivity.class);
+
+        infoList.add("绘画文字测试");
+        classList.add(DrawTextActivity.class);
+
+        infoList.add("文件URI测试");
+        classList.add(FileURITestActivity.class);
+
+        infoList.add("经典蓝牙开发测试");
+        classList.add(ClassicBluetoothActivity.class);
+
+        infoList.add("时间转long型");
+        classList.add(TimeTranslateActivity.class);
     }
 
     /**
