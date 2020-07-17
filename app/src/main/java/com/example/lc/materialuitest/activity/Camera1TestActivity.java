@@ -240,6 +240,17 @@ public class Camera1TestActivity extends AppCompatActivity {
             showToast("未获取到相机设备");
             return;
         }
+
+        List<Camera.Size> pictureSizes = camera.getParameters().getSupportedPictureSizes();
+        for (int i=0;i<pictureSizes.size();i++){
+            Log.d("JsonList", "支持图片尺寸:" + pictureSizes.get(i).width + "x" + pictureSizes.get(i).height);
+        }
+
+        List<Camera.Size> previewSizes = camera.getParameters().getSupportedPreviewSizes();
+        for (int i=0;i<pictureSizes.size();i++){
+            Log.d("JsonList", "支持预览尺寸:" + previewSizes.get(i).width + "x" + previewSizes.get(i).height);
+        }
+
         try {
             camera.setPreviewDisplay(surfaceHolder);
             //配置camera参数

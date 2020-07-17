@@ -10,6 +10,7 @@
     <uses-permission android:name="android.permission.BLUETOOTH"/>
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
     <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
     <uses-permission android:name="android.permission.GET_TASKS" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -25,11 +26,13 @@
     <uses-feature android:glEsVersion="0x00020000" android:required="true" />
 
     <application
+        android:name=".MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
         android:theme="@style/AppTheme">
         <activity android:name=".activity.MainActivity">
             <intent-filter>
@@ -56,13 +59,30 @@
         <activity android:name=".activity.CodeTestActivity"/>
         <activity android:name=".activity.Camera1TestActivity"/>
         <activity android:name=".activity.RecordActivity"/>
-        <activity android:name=".activity.OpenGLTestActivity"/>
 
         <activity android:name=".activity.AMapTestActivity"/>
         <activity android:name=".activity.DrawTextActivity"/>
         <activity android:name=".activity.FileURITestActivity"/>
         <activity android:name=".activity.ClassicBluetoothActivity"/>
         <activity android:name=".activity.TimeTranslateActivity"/>
+
+        <activity android:name=".activity.BluetoothHeadsetActivity"/>
+        <activity android:name=".activity.PickPicActivity"/>
+        <activity android:name=".activity.OpenGLTestActivity"/>
+        <activity android:name=".activity.X5TestActivity"/>
+        <activity android:name=".activity.SystemWebViewTestActivity"/>
+
+        <activity android:name=".activity.H5TestActivity"/>
+        <activity android:name=".activity.MaterialTabActivity"/>
+        <activity android:name=".activity.ControlsDragActivity"/>
+        <activity android:name=".activity.LockTableActivity"/>
+        <activity android:name=".activity.TextScriptActivity"/>
+
+        <activity android:name=".activity.CustomExcelActivity"/>
+        <activity android:name=".activity.SmartTableTestActivity"/>
+        <activity android:name=".activity.HorizontalScrollViewActivity"/>
+        <activity android:name=".activity.HorizontalRvActivity"/>
+        <activity android:name=".activity.ScrollablePanelTestActivity"/>
 
         <meta-data
             android:name="com.baidu.lbsapi.API_KEY"

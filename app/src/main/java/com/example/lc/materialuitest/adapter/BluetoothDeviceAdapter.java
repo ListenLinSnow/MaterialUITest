@@ -2,6 +2,7 @@ package com.example.lc.materialuitest.adapter;
 
 import android.bluetooth.BluetoothDevice;
 import android.content.Context;
+import android.graphics.Color;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
@@ -48,6 +49,14 @@ public class BluetoothDeviceAdapter extends RecyclerView.Adapter {
         }
         holder.tvAddress.setText(device.getAddress());
 
+        if (device.getBondState() == BluetoothDevice.BOND_BONDED){
+            holder.tvState.setText("Ready");
+            holder.tvState.setTextColor(Color.GREEN);
+        } else {
+            holder.tvState.setText("New");
+            holder.tvState.setTextColor(Color.RED);
+        }
+
         holder.item.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -71,6 +80,8 @@ public class BluetoothDeviceAdapter extends RecyclerView.Adapter {
         TextView tvName;
         @BindView(R.id.tv_item_bluetooth_device_address)
         TextView tvAddress;
+        @BindView(R.id.tv_item_bluetooth_device_state)
+        TextView tvState;
 
         public BluetoothDeviceViewHolder(@NonNull View itemView) {
             super(itemView);

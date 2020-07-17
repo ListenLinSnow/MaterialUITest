@@ -28,6 +28,7 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
+import com.baidu.mapapi.http.HttpClient;
 import com.example.lc.materialuitest.R;
 
 import java.util.Map;

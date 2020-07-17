@@ -23,4 +23,13 @@
         android:layout_centerVertical="true"
         android:textSize="12sp"/>
 
+    <TextView
+        android:id="@+id/tv_item_bluetooth_device_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:textStyle="bold"/>
+
 </RelativeLayout>

@@ -5,19 +5,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
-
-
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar_buttons"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="?attr/colorPrimary"
-            android:elevation="4dp"
-            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"></android.support.v7.widget.Toolbar>
-
-
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"></android.support.v7.widget.Toolbar>
 
     <Button
+        android:id="@+id/btn_buttons_test"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="button"
@@ -37,5 +34,23 @@
         android:spinnerMode="dropdown"
         android:overlapAnchor="false"
         android:layout_margin="8dp"/>
+
+    <LinearLayout
+        android:id="@+id/ll_buttons_test"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/light_gray"
+        android:clickable="true">
+
+        <TextView
+            android:id="@+id/tv_buttons_test"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="世间安得双全法，不负如来不负卿"
+            android:padding="10dp"
+            android:foreground="?attr/selectableItemBackground"
+            android:clickable="true"/>
+
+    </LinearLayout>
 
 </LinearLayout>

@@ -5,7 +5,6 @@ import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.DefaultItemAnimator;
-import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
@@ -35,8 +34,6 @@ public class MainActivity extends AppCompatActivity implements SingleTextAdapter
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
-
-
 
         init();
     }
@@ -108,9 +105,6 @@ public class MainActivity extends AppCompatActivity implements SingleTextAdapter
         infoList.add("拍视频水印测试");
         classList.add(RecordActivity.class);
 
-        infoList.add("OpenGL开发测试");
-        classList.add(OpenGLTestActivity.class);
-
         infoList.add("高德地图测试");
         classList.add(AMapTestActivity.class);
 
@@ -123,8 +117,56 @@ public class MainActivity extends AppCompatActivity implements SingleTextAdapter
         infoList.add("经典蓝牙开发测试");
         classList.add(ClassicBluetoothActivity.class);
 
+        infoList.add("蓝牙耳机测试");
+        classList.add(BluetoothHeadsetActivity.class);
+
         infoList.add("时间转long型");
         classList.add(TimeTranslateActivity.class);
+
+        infoList.add("自定义图片选择开发");
+        classList.add(PickPicActivity.class);
+
+        infoList.add("OpenGL ES开发学习");
+        classList.add(OpenGLTestActivity.class);
+
+        infoList.add("OpenGL 文字绘制测试");
+        classList.add(OpenGLTextTestActivity.class);
+
+        infoList.add("X5页面加载测试");
+        classList.add(X5TestActivity.class);
+
+        infoList.add("系统内核加载测试");
+        classList.add(SystemWebViewTestActivity.class);
+
+        infoList.add("H5页面学习测试");
+        classList.add(H5TestActivity.class);
+
+        infoList.add("Material Tab测试");
+        classList.add(MaterialTabActivity.class);
+
+        infoList.add("控件拖动测试");
+        classList.add(ControlsDragActivity.class);
+
+        infoList.add("字体上下标测试");
+        classList.add(TextScriptActivity.class);
+
+        infoList.add("LockTable Excel测试");
+        classList.add(LockTableActivity.class);
+
+        infoList.add("自定义Excel测试");
+        classList.add(CustomExcelActivity.class);
+
+        infoList.add("SmartTable Excel测试");
+        classList.add(SmartTableTestActivity.class);
+
+        infoList.add("HorizontalScrollView测试");
+        classList.add(HorizontalScrollViewActivity.class);
+
+        infoList.add("HorizontalRecyclerView测试");
+        classList.add(HorizontalRvActivity.class);
+
+        infoList.add("ScrollablePanel 测试");
+        classList.add(ScrollablePanelTestActivity.class);
     }
 
     /**

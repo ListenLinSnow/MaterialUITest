@@ -45,25 +45,6 @@ public class RvAnimTestAdapter extends RecyclerView.Adapter {
         RvAnimTestViewHolder holder = (RvAnimTestViewHolder) viewHolder;
         holder.tvInfo.setText("测试" + i);
 
-        //设置加载过的位置不再有动画（但我不喜欢这种）
-        /*int adapterPosition = holder.getAdapterPosition();
-        if(adapterPosition > lastPosition) {
-            WindowManager windowManager = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
-            int width = windowManager.getDefaultDisplay().getWidth();
-            Animator animator1 = ObjectAnimator.ofFloat(holder.llItem, "alpha", 0f, 1f);
-            Animator animator2 = ObjectAnimator.ofFloat(holder.llItem, "translationX", width, 0f);
-            animator1.setDuration(1000).start();
-            animator2.setDuration(1000).start();
-            lastPosition = adapterPosition;
-        }else {
-            ViewCompat.setAlpha(holder.itemView, 1);
-        }*/
-        //WindowManager windowManager = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
-        //int width = windowManager.getDefaultDisplay().getWidth();
-        //Animator animator1 = ObjectAnimator.ofFloat(holder.llItem, "alpha", 0f, 1f);
-        //Animator animator2 = ObjectAnimator.ofFloat(holder.llItem, "translationX", width, 0f);
-        //animator1.setDuration(1000).start();
-        //animator2.setDuration(500).start();
         Animator animator3 = ObjectAnimator.ofFloat(holder.llItem, "scaleX", 0f, 1.2f, 1f);
         Animator animator4 = ObjectAnimator.ofFloat(holder.llItem, "scaleY", 0f, 1.2f, 1f);
         animator3.setDuration(500).start();

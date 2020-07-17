@@ -10,6 +10,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.lc.materialuitest.R;
+import com.example.lc.materialuitest.view.OnTVViewFocusChangeListener;
 
 import java.util.List;
 
@@ -48,6 +49,8 @@ public class SingleTextAdapter extends RecyclerView.Adapter {
                 }
             }
         });
+
+        holder.llItem.setOnFocusChangeListener(new OnTVViewFocusChangeListener(context));
     }
 
     @Override
