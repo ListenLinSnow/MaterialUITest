@@ -8,8 +8,10 @@ import android.widget.HorizontalScrollView;
 import android.widget.LinearLayout;
 
 import com.example.lc.materialuitest.R;
+import com.example.lc.materialuitest.view.customTable.CustomTable;
+import com.example.lc.materialuitest.view.customTable.XRecyclerView;
 import com.rmondjone.locktableview.LockTableView;
-import com.rmondjone.xrecyclerview.XRecyclerView;
+
 
 import java.util.ArrayList;
 
@@ -60,60 +62,28 @@ public class LockTableActivity extends AppCompatActivity {
             }
         }
 
-        final LockTableView lockTableView = new LockTableView(this, llLockTable, dataList);
-        lockTableView.setLockFristColumn(true)
-                .setLockFristRow(true)
-                .setMaxColumnWidth(100)
+        final CustomTable customTable = new CustomTable(this, llLockTable, dataList);
+        customTable.setLockFirstColumn(true)
+                .setLockFirstColumn(true)
                 .setMinColumnWidth(60)
-                .setColumnWidth(1, 60)
-                .setMaxRowHeight(60)
+                .setMinRowHeight(20)
+                .setTextViewSize(16)
+                .setCellPadding(15)
+                .setFirstRowBackgroundColor(R.color.md_blue_200)
+                .setNullableString("N/A")
+                .setOnItemSelector(R.color.md_red_200)
+                .show();
+        /*LockTableView lockTableView = new LockTableView(this, llLockTable, dataList);
+        lockTableView.setLockFristColumn(true)
+                .setLockFristColumn(true)
+                .setMinColumnWidth(60)
                 .setMinRowHeight(20)
                 .setTextViewSize(16)
                 .setCellPadding(15)
                 .setFristRowBackGroudColor(R.color.md_blue_200)
                 .setNullableString("N/A")
-                .setTableViewListener(new LockTableView.OnTableViewListener() {
-                    @Override
-                    public void onTableViewScrollChange(int i, int i1) {
-
-                    }
-                })
-                .setTableViewRangeListener(new LockTableView.OnTableViewRangeListener() {
-                    @Override
-                    public void onLeft(HorizontalScrollView horizontalScrollView) {
-
-                    }
-
-                    @Override
-                    public void onRight(HorizontalScrollView horizontalScrollView) {
-
-                    }
-                })
-                .setOnLoadingListener(new LockTableView.OnLoadingListener() {
-                    @Override
-                    public void onRefresh(XRecyclerView xRecyclerView, ArrayList<ArrayList<String>> arrayList) {
-
-                    }
-
-                    @Override
-                    public void onLoadMore(XRecyclerView xRecyclerView, ArrayList<ArrayList<String>> arrayList) {
-
-                    }
-                })
-                .setOnItemClickListenter(new LockTableView.OnItemClickListenter() {
-                    @Override
-                    public void onItemClick(View view, int i) {
-
-                    }
-                })
-                .setOnItemLongClickListenter(new LockTableView.OnItemLongClickListenter() {
-                    @Override
-                    public void onItemLongClick(View view, int i) {
-
-                    }
-                })
                 .setOnItemSeletor(R.color.md_red_200)
-                .show();
+                .show();*/
     }
 
 }

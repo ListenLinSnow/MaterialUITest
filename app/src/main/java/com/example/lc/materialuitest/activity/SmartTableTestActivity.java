@@ -3,9 +3,12 @@ package com.example.lc.materialuitest.activity;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 
 import com.bin.david.form.annotation.SmartColumn;
 import com.bin.david.form.annotation.SmartTable;
+import com.bin.david.form.data.column.ColumnInfo;
+import com.bin.david.form.listener.OnColumnClickListener;
 import com.example.lc.materialuitest.R;
 
 import java.util.ArrayList;
@@ -123,6 +126,13 @@ public class SmartTableTestActivity extends AppCompatActivity {
         gameList.add(new Npc("多特", "男", "秋19", "牛奶S", "蜂蜜", "芜菁", "黄瓜", "蛋糕", "多特最喜欢的东西是牛奶。不管是什么哪种牛奶效果都一样，所以送牛奶S是个不错的选择。"));
         gameList.add(new Npc("艾丽", "女", "春16", "赏月丸子", "牛奶S", "蓝莓", "芜菁", "青椒", "周三是医院的休息日也是艾丽的休息日。所以艾丽相关的事件大多在周三发生。"));
         smartTable.setData(gameList);
+        smartTable.setOnColumnClickListener(new OnColumnClickListener() {
+            @Override
+            public void onClick(ColumnInfo columnInfo) {
+
+            }
+        });
+
 
         //设置背景色
         /*smartTable.getConfig().setContentCellBackgroundFormat(new BaseCellBackgroundFormat<CellInfo>() {
